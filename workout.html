@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenBite-Workout</title>
+    <!-- Favicon for browser tab -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <!-- Google Fonts for better typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header section with navigation -->
+    <header class="header">
+      <!-- Logo section positioned on top left -->
+      <div class="logo">
+        <img src="./images/logo.png" alt="GreenBite Logo" />
+        <span>GreenBite</span>
+        <small>Your wellness partner</small>
+      </div>
+
+      <!-- Navigation menu -->
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+          <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+          <li><a href="workout.html" class="nav-link active">workout</a></li>
+          <li><a href="mindfulness.html" class="nav-link">Mindfulness</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger menu for mobile view -->
+      <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main class="workout-main">
+      <section class="workout-generator">
+        <div class="generator-container">
+          <div class="generator-card">
+            <h1 class="generator-title">Workout Generator</h1>
+            <p class="generator-subtitle">
+              Choose your focus and equipment to create a custom workout plan.
+            </p>
+            <form id="generatorForm">
+              <div class="form-group">
+                <label for="bodyPart">Body Part Focus:</label>
+                <select id="bodyPart" name="bodyPart" required>
+                  <option value="" disabled selected>Select a body part</option>
+                  <option value="full-body">Full Body</option>
+                  <option value="arms">Arms</option>
+                  <option value="legs">Legs</option>
+                  <option value="core">Core</option>
+                  <option value="cardio">Cardio</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="equipment">Equipment:</label>
+                <select id="equipment" name="equipment" required>
+                  <option value="" disabled selected>Select equipment</option>
+                  <option value="none">No Equipment</option>
+                  <option value="dumbbells">Dumbbells</option>
+                </select>
+              </div>
+              <button type="submit" class="generate-btn">
+                Generate Workout
+              </button>
+            </form>
+          </div>
+
+          <div class="workout-display-card" id="workoutDisplayCard">
+            <h2>Your Workout Plan</h2>
+            <div id="workoutPlan">
+              <p class="placeholder-text">
+                Generate a workout to see your plan here.
+              </p>
+            </div>
+            <div id="timerContainer" style="display: none">
+              <div class="timer-box">
+                <div class="timer-circle">
+                  <div class="timer-pie"></div>
+                  <div class="timer-pie-fill"></div>
+                </div>
+                <div class="timer-content">
+                  <h3 id="timerExerciseName">Exercise Name</h3>
+                  <div class="timer-countdown" id="timerCountdown">00:00</div>
+                  <p id="timerReps">Reps: --</p>
+                  <button id="nextExerciseBtn" class="next-btn">
+                    Next Exercise
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Company info -->
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img src="./images/logo.png" alt="GreenBite Logo" />
+              <div>
+                <h3>GreenBite</h3>
+                <p>
+                  The world's first and largest digital wellness organization &
+                  Non-Profit helping people.
+                </p>
+              </div>
+            </div>
+
+            <!-- Social media links -->
+            <div class="social-links">
+              <a href="#" class="social-link facebook">f</a>
+              <a href="#" class="social-link instagram">I</a>
+              <a href="#" class="social-link x">x</a>
+              <a href="#" class="social-link linkedin">in</a>
+            </div>
+          </div>
+
+          <!-- Services menu -->
+          <div class="footer-section">
+            <h4>Services Required</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="calculator.html" class="nav-link"
+                  >Nutrition Planning</a
+                >
+              </li>
+              <li>
+                <a href="workout.html" class="nav-link">Fitness Programs</a>
+              </li>
+              <li>
+                <a href="mindfulness.html" class="nav-link"
+                  >Mindfulness Coaching</a
+                >
+              </li>
+              <li>
+                <a href="recipes.html" class="nav-link">Recipe Library</a>
+              </li>
+              <li>
+                <a href="contact.html" class="nav-link">Community Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Address -->
+          <div class="footer-section">
+            <h4>Find Us</h4>
+            <div class="news-item">
+              <div>
+                <p>88/45 Nawam Mawatha, Kandy, SriLanka</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div>
+                <p>hello@greenbite.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <p>© Copyright 2025 by GreenBite</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

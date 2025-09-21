@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenBite-Home</title>
+    <!-- Favicon for browser tab -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <!-- Google Fonts for better typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header section with navigation -->
+    <header class="header">
+      <!-- Logo section positioned on top left -->
+      <div class="logo">
+        <img src="./images/logo.png" alt="GreenBite Logo" />
+        <span>GreenBite</span>
+        <small>Your wellness partner</small>
+      </div>
+
+      <!-- Navigation menu -->
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+          <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+          <li><a href="workout.html" class="nav-link">workout</a></li>
+          <li><a href="mindfulness.html" class="nav-link">Mindfulness</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger menu for mobile view -->
+      <div class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+      <!-- Hero section with auto-rotating slogans -->
+      <section class="hero" id="home">
+        <!-- Hero content left side -->
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Your partner in every stage of the wellness journey.
+          </h1>
+          <!-- Auto-rotating health slogans -->
+          <p class="hero-slogan" id="heroSlogan">
+            Transform your life with healthy choices
+          </p>
+
+          <!-- Hero action buttons -->
+          <div class="hero-actions">
+            <button class="discover-btn" onclick="scrollToServices()">
+              Discover More
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero image right side -->
+        <div class="hero-image">
+          <div class="hero-circle">
+            <img
+              src="./images/wellness.jpg"
+              alt="Wellness Journey"
+              class="hero-main-img"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Daily Health Tip Section -->
+      <section class="daily-tip" id="daily-tip">
+        <div class="container">
+          <div class="tip-badge">HEALTH TIP OF THE DAY</div>
+          <div class="tip-content" id="dailyTipContent">
+            <h3 id="tipTitle">Loading...</h3>
+            <p id="tipDescription">Getting today's health tip for you...</p>
+            <div class="tip-date" id="tipDate"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services section -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">EXPLORE SERVICES</div>
+            <h2 class="section-title">Trusted Wellness Services</h2>
+          </div>
+
+          <!-- Services grid -->
+          <div class="services-grid">
+            <!-- Service 1: Nutrition Planning -->
+            <div class="service-card">
+              <div class="service-icon">
+                <img src="./images/diet.png" alt="Nutrition Planning" />
+              </div>
+              <div class="service-content">
+                <a href="calculator.html" class="nav-link"
+                  ><h3>Nutrition Planning</h3></a
+                >
+                <p>
+                  Personalized meal plans and nutrition guidance to help you
+                  achieve your wellness goals with balanced, delicious foods.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 2: Fitness Programs -->
+            <div class="service-card">
+              <div class="service-icon">
+                <img src="./images/fitness.png" alt="Fitness Programs" />
+              </div>
+              <div class="service-content">
+                <a href="workout.html" class="nav-link"
+                  ><h3>Fitness Programs</h3></a
+                >
+                <p>
+                  Customized workout routines and exercise plans designed to fit
+                  your lifestyle and fitness level.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 3: Mindfulness Coaching -->
+            <div class="service-card">
+              <div class="service-icon">
+                <img src="./images/lotus.png" alt="Mindfulness Coaching" />
+              </div>
+              <div class="service-content">
+                <a href="mindfulness.html" class="nav-link"
+                  ><h3>Mindfulness Coaching</h3></a
+                >
+                <p>
+                  Meditation sessions and stress management techniques to
+                  promote mental well-being and inner peace.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service 4: recipe library -->
+            <div class="service-card">
+              <div class="service-icon">
+                <img src="./images/calories.png" alt="Calorie Calculator" />
+              </div>
+              <div class="service-content">
+                <a href="recipes.html" class="nav-link"
+                  ><h3>Recipe Library</h3></a
+                >
+                <p>Calculate your daily nutritional needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter signup section -->
+      <section class="newsletter-section">
+        <div class="container">
+          <div class="newsletter-content">
+            <div class="newsletter-text">
+              <h2>Get in touch!</h2>
+              <p>
+                Subscribe to our newsletter for daily health tips and wellness
+                updates.
+              </p>
+            </div>
+            <div class="newsletter-form">
+              <form
+                id="newsletterForm"
+                onsubmit="handleNewsletterSubmit(event)"
+              >
+                <input
+                  type="email"
+                  id="newsletterEmail"
+                  placeholder="example@gmail.com"
+                  required
+                />
+                <button type="submit">Subscribe</button>
+              </form>
+              <div id="newsletterMessage" class="newsletter-message"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Company info -->
+          <div class="footer-section">
+            <div class="footer-logo">
+              <img src="./images/logo.png" alt="GreenBite Logo" />
+              <div>
+                <h3>GreenBite</h3>
+                <p>
+                  The world's first and largest digital wellness organization &
+                  Non-Profit helping people.
+                </p>
+              </div>
+            </div>
+
+            <!-- Social media links -->
+            <div class="social-links">
+              <a href="#" class="social-link facebook">f</a>
+              <a href="#" class="social-link instagram">I</a>
+              <a href="#" class="social-link x">x</a>
+              <a href="#" class="social-link linkedin">in</a>
+            </div>
+          </div>
+
+          <!-- Services menu -->
+          <div class="footer-section">
+            <h4>Services Required</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="calculator.html" class="nav-link"
+                  >Nutrition Planning</a
+                >
+              </li>
+              <li>
+                <a href="workout.html" class="nav-link">Fitness Programs</a>
+              </li>
+              <li>
+                <a href="mindfulness.html" class="nav-link"
+                  >Mindfulness Coaching</a
+                >
+              </li>
+              <li>
+                <a href="recipes.html" class="nav-link">Recipe Library</a>
+              </li>
+              <li>
+                <a href="contact.html" class="nav-link">Community Support</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Address -->
+          <div class="footer-section">
+            <h4>Find Us</h4>
+            <div class="news-item">
+              <div>
+                <p>88/45 Nawam Mawatha, Kandy, SriLanka</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div>
+                <p>hello@greenbite.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <p>© Copyright 2025 by GreenBite</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>

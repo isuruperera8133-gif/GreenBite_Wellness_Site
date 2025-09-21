@@ -1,0 +1,1607 @@
+/* Reset and base styles */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0px; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element width */
+}
+
+/* Body styling with custom font */
+body {
+    font-family: 'Poppins', sans-serif; /* Google font for better typography */
+    line-height: 2; /* Improve text readability */
+    color: #333; /* Dark text color */
+    background-color: #f6f3f4bb; /* Light background */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container for centered content */
+.container {
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: auto; /* Center the container */
+    
+}
+
+/* Header styling */
+.header {
+    background-color: white; /* White background */
+    padding: 20px; /* Padding around header */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: flex-end; 
+    position: fixed; /* Fixed position at top */
+    top: 0; /* Stick to top */
+    left: 0; /* Stick to left */
+    right: 0; /* Stick to right */
+    z-index: 1000; /* High z-index to stay above other elements */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Logo styling */
+.logo {
+    display: flex; /* Flexbox for logo elements */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between elements */
+}
+
+.logo img {
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    border-radius: 50%; /* Make it circular */
+}
+
+.logo span {
+    font-size: 1.5rem; /* Large font size */
+    font-weight: 700; /* Bold font weight */
+    color: #8B4B9C; /* Purple color matching design */
+}
+
+.logo small {
+    font-size: 0.8rem; /* Small font size */
+    color: #666; /* Gray color */
+    display: block; /* Block display */
+    line-height: 1; /* Tight line height */
+}
+
+/* Navigation styling */
+.nav {
+    display: flex; /* Flexbox layout */
+}
+
+.nav-list {
+    display: flex; /* Horizontal layout */
+    list-style: none; /* Remove bullet points */
+    gap: 3rem; /* Space between items */
+}
+
+.nav-link {
+    color: #333; /* Dark text */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Medium font weight */
+    padding: 0.5rem 1rem; /* Padding around links */
+    border-radius: 25px; /* Rounded corners */
+    transition: 0.3s ; /* Smooth transition */
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #8B4B9C; /* Purple color on hover/active */
+    background-color: rgba(139, 75, 156, 0.1); /* Light purple background */
+}
+
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Vertical layout */
+    cursor: pointer; /* Pointer cursor */
+    gap: 5px; /* Space between lines */
+}
+
+.hamburger span {
+    width: 25px; /* Line width */
+    height: 3px; /* Line height */
+    background-color: #333; /* Dark color */
+    transition: 0.3s; /* Smooth animation */
+}
+
+/* Main content margin for fixed header */
+main {
+    margin-top: 80px; /* Space for fixed header */
+}
+
+/* Hero section styling */
+.hero {
+    padding: 4rem 2rem; /* Padding around hero */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between content and image */
+    min-height: 70vh; /* Minimum height */
+    background: linear-gradient( #f8f9fa 0%, #e9ecef 100%); /* Light gradient */
+}
+
+/* Hero content left side */
+.hero-content {
+    max-width: 600px; /* Maximum width */
+    margin-right: 1rem; /* Right margin */
+}
+
+.hero-title {
+    font-size: 4rem; /* Large font size */
+    font-weight: 700; /* Bold */
+    color: #333; /* Dark color */
+    margin-bottom: 2rem; /* Space below */
+    line-height: 1.5; /* Tight line height */
+}
+
+.hero-slogan {
+    font-size: 1.2rem; /* Medium font size */
+    color: #666; /* Gray color */
+    margin-bottom: 2rem; /* Space below */
+    font-weight: 300; /* Light weight */
+    transition:  0.5s ; /* Smooth fade transition */
+}
+
+/* Hero actions container */
+.hero-actions {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    gap: 2rem; /* Space between elements */
+}
+
+.discover-btn {
+    background: linear-gradient(135deg, #8B4B9C, #A569BD); /* Purple gradient */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 1rem 2rem; /* Padding */
+    font-size: 1.1rem; /* Font size */
+    font-weight: 600; /* Semi-bold */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.discover-btn:hover {
+    transform: translateY(-3px); /* Move up */
+    box-shadow: 0 10px 25px rgba(139, 75, 156, 0.3); /* Shadow */
+}
+/* Hero image right side */
+.hero-image {
+    flex: 1; /* Take available space */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+}
+
+.hero-circle {
+    width: 500px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    border-radius: 50%; /* Circular shape */
+    background: linear-gradient(135deg, #8B4B9C, #A569BD); /* Purple gradient */
+   
+    align-items: center; /* Center vertically */
+    
+    padding: 15px; /* Inner padding */
+   
+    
+}
+
+.hero-main-img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the area */
+    border-radius: 50%; /* Circular image */
+}
+
+/* Daily tip section */
+.daily-tip {
+    background: linear-gradient(#8B4B9C, #A569BD); /* Purple gradient */
+    color: white; /* White text */
+    padding: 3rem 0; /* Vertical padding */
+    text-align: center; /* Center text */
+}
+
+.tip-badge {
+    display: inline-block; /* Inline block */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    padding: 0.5rem 1rem; /* Padding */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 0.9rem; /* Small font */
+    font-weight: 500; /* Medium weight */
+    margin-bottom: 1.5rem; /* Space below */
+}
+
+.tip-content {
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center content */
+}
+
+.tip-content h3 {
+    font-size: 2rem; /* Large font size */
+    font-weight: 600; /* Semi-bold */
+    margin-bottom: 1rem; /* Space below */
+}
+
+.tip-content p {
+    font-size: 1.1rem; /* Medium font size */
+    line-height: 1.6; /* Good line height */
+    margin-bottom: 1rem; /* Space below */
+}
+
+.tip-date {
+    font-size: 0.9rem; /* Small font size */
+    opacity: 0.8; /* Semi-transparent */
+}
+
+/* Services section */
+.services {
+    padding: 5rem 0; /* Large vertical padding */
+    background-color: #fff; /* White background */
+}
+
+.section-header {
+    text-align: center; /* Center text */
+    margin-bottom: 4rem; /* Large space below */
+}
+
+.section-badge {
+    display: inline-block; /* Inline block */
+    background: rgba(139, 75, 156, 0.1); /* Light purple background */
+    color: #8B4B9C; /* Purple text */
+    padding: 0.5rem 1rem; /* Padding */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 0.9rem; /* Small font */
+    font-weight: 500; /* Medium weight */
+    margin-bottom: 1rem; /* Space below */
+}
+
+.section-title {
+    font-size: 2rem; /* Large font size */
+    font-weight: 700; /* Bold */
+    color: #333; /* Dark color */
+}
+
+/* Services grid layout */
+.services-grid {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between cards */
+}
+
+/* Service card styling */
+.service-card {
+    background: #fff; /* White background */
+    padding: 3rem; /* Padding */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Subtle shadow */
+    transition:  0.3s; /* Smooth transition */  
+    gap: 2rem; /* Space between icon and content */
+    border: 2px solid transparent; /* Transparent border */
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12); /* Enhanced shadow */
+    border-color: #8B4B9C; /* Purple border */
+}
+
+.service-icon img {
+    width: 60px; /* Fixed width */
+    height: 60px; /* Fixed height */
+    border-radius: 50%; /* Circular image */
+   
+}
+
+.service-content h3 {
+    font-size: 1.3rem; /* Medium font size */
+    font-weight: 600; /* Semi-bold */
+    color: #333; /* Dark color */
+    margin-bottom: 0.5rem; /* Space below */
+}
+
+.service-content p {
+    color: #666; /* Gray color */
+    line-height: 1.6; /* Good line height */
+    margin-bottom: 1rem; /* Space below */
+}
+
+/* Newsletter section */
+.newsletter-section {
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    padding: 3rem 0; /* Vertical padding */
+}
+
+.newsletter-content {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center vertically */
+}
+
+.newsletter-text h2 {
+    font-size: 2rem; /* Large font size */
+    font-weight: 600; /* Semi-bold */
+    margin-bottom: 0.5rem; /* Space below */
+}
+
+.newsletter-text p {
+    font-size: 1.1rem; /* Medium font size */
+    opacity: 0.9; /* Semi-transparent */
+}
+
+.newsletter-form {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    gap: 1rem; /* Space between elements */
+}
+
+.newsletter-form form {
+    display: flex; /* Flexbox layout */
+    background: white; /* White background */
+    border-radius: 30px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Shadow */
+}
+
+.newsletter-form button {
+    background: linear-gradient(#8B4B9C, #A569BD); /* Purple gradient */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 1rem 1rem; /* Padding */
+    font-size: 1.2rem; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition:  0.3s ; /* Smooth transition */
+}
+/* --- Recipes Page Styles ---------------------------------------------------------------------------------------------------- */
+
+/* Recipe Hero Section (similar to homepage hero) */
+.recipe-hero {
+  background-color: #f0e8ec;
+  background-image: url("./images/Nutrition.jpg");
+  background-size: cover;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.recipe-hero .container {
+  max-width: 800px;
+}
+
+.recipe-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.recipe-hero p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-container input,
+.search-container select {
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.search-container input {
+  min-width: 200px;
+}
+
+.search-container select {
+  border-left: 1px solid #ddd;
+}
+
+.search-btn {
+    background: linear-gradient(135deg, #8B4B9C, #A569BD); /* Purple gradient */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 1rem 2rem; /* Padding */
+    font-size: 1.1rem; /* Font size */
+    font-weight: 600; /* Semi-bold */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.search-btn:hover {
+    transform: translateY(-3px); /* Move up */
+    box-shadow: 0 10px 25px rgba(139, 75, 156, 0.3); /* Shadow */
+}
+
+/* Recipes Grid Section */
+.recipessection {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+.recipegrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.recipe-card {
+    background: #fff; /* White background */
+    padding: 3rem; /* Padding */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Subtle shadow */
+    transition:  0.3s; /* Smooth transition */  
+    gap: 2rem; /* Space between icon and content */
+    border: 2px solid transparent; /* Transparent border */
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12); /* Enhanced shadow */
+    border-color: #8B4B9C; /* Purple border */
+}
+
+.recipe-card-content {
+  padding: 1.5rem;
+}
+
+.recipe-card-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-card-content p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+.recipe-card img {
+    
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 20px;
+    
+   
+}
+
+/* --- Recipe Modal Styles --- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  position: relative;
+}
+
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #8b4b9c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.modal-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modal-section {
+  margin-bottom: 2rem;
+}
+
+.modal-section .section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.modal-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-list li {
+  background-color: #f9f9f9;
+  border-left: 4px solid #8b4b9c;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.modal-list.ordered li {
+  counter-increment: list-item;
+  list-style-type: decimal;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.nutrition-table th {
+  background-color: #f0e8ec;
+  color: #8b4b9c;
+  font-weight: 600;
+}
+/* --- Calculator Page Specific Styles ------------------------------------------------------------------------------------------ */
+.calculator-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+  padding: 50px 20px;
+}
+
+.calculator-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.calculator-form-card,
+.calculator-result-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  transition: 0.3s;
+}
+
+.calculator-form-card {
+  background: #b2a7c4;
+  color: #fff;
+  transform: translateY(0);
+}
+
+.calculator-form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.calculator-subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.form-group input[type="number"],
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 3px rgba(167, 102, 198, 0.5);
+}
+
+.gender-options {
+  display: flex;
+  gap: 15px;
+}
+
+.gender-options input[type="radio"] {
+  display: none;
+}
+
+.gender-options label {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #a766c6;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gender-options input[type="radio"]:checked + label {
+  background-color: #fff;
+  color: #a766c6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+.calculator-btn {
+    background: linear-gradient(135deg, #8B4B9C, #A569BD); /* Purple gradient */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 1rem 10rem; /* Padding */
+    font-size: 1.1rem; /* Font size */
+    font-weight: 600; /* Semi-bold */
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition:  0.3s ; /* Smooth transition */
+}
+
+.calculator-btn:hover {
+    transform: translateY(-3px); /* Move up */
+    box-shadow: 0 10px 25px rgba(139, 75, 156, 0.3); /* Shadow */
+}
+
+.calculator-result-card {
+  background-color: #f0f0f5;
+  background-image: url(./images/beyza-yilmaz-66eEdPB6EKg-unsplash.jpg);
+  background-size: cover;
+  color: #111010;
+}
+
+.calculator-result-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.placeholder-text {
+  text-align: center;
+  color: #0b0000;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+#resultContent h3 {
+  font-size: 1.5rem;
+  color: #a766c6;
+  margin-bottom: 10px;
+}
+
+.result-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.result-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+.result-section p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+/* --- Workout Page Styles------------------------------------------------------------------------------------------------- --- */
+.workout-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 50px 20px;
+}
+
+.generator-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.generator-card,
+.workout-display-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  transition: 0.3s;
+}
+
+.generator-card {
+  background: #b2a7c4;
+  color: #fff;
+  transform: translateY(0);
+}
+
+.generator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.generator-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.generator-subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  color: #333;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group select:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 3px rgba(167, 102, 198, 0.5);
+}
+
+.generate-btn {
+    background: linear-gradient(135deg, #8B4B9C, #A569BD); 
+    color: white; 
+    border: none; 
+    padding: 1rem 7rem; 
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    transition:  0.3s ; 
+}
+
+.generate-btn:hover {
+    transform: translateY(-3px); /* Move up */
+    box-shadow: 0 10px 25px rgba(139, 75, 156, 0.3); /* Shadow */
+}
+
+
+.workout-display-card {
+  background-color: #f0f0f5;
+  background-image: url(./images/gabin-vallet-YxCrQm9XNgg-unsplash.jpg);
+  background-size: cover;
+  color: #111010;
+  text-align: center;
+}
+
+.workout-display-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.placeholder-text {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+.workout-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.workout-item {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.workout-item h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.workout-item p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.timer-content {
+  text-align: center;
+}
+
+#timerExerciseName {
+  font-size: 1.5rem;
+  color: #a766c6;
+  margin-bottom: 10px;
+}
+
+.timer-countdown {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.next-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  background-color: #a766c6;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+.next-btn:hover {
+  background-color: #9258b0;
+  box-shadow: 0 5px 15px rgba(167, 102, 198, 0.4);
+}
+
+
+/* --- Mindfulness Page Styles ------------------------------------------------------------------------------------------------- */
+.mindfulness-main {
+  min-height: calc(100vh - 200px);
+  padding: 50px 0;
+  margin: 0;
+}
+
+.mindfulness-hero {
+  text-align: center;
+  padding: 80px 20px;
+  margin: 0;
+  background-image: url("./images/meditation2.jpg");
+  background-size: cover;
+  
+}
+
+.mindfulness-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.mindfulness-hero p {
+  font-size: 1.1rem;
+  color: #151414;
+  line-height: 1.6;
+}
+
+.mindfulness-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.breathing-card,
+.meditation-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.breathing-card .section-title,
+.meditation-card .section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.breathing-circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+.breathing-circle {
+  width: 150px;
+  height: 150px;
+  background-color: #a766c6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform 6s ;
+}
+
+.breathe-in {
+  animation: scaleIn 4s forwards;
+}
+
+.breathe-out {
+  animation: scaleOut 4s forwards;
+}
+
+.breathe-hold {
+  animation: none;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+.breathing-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.breathing-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  background-color: #a766c6;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.breathing-btn:hover {
+  background-color: #9258b0;
+  transform: translateY(-2px);
+}
+
+.meditation-card {
+  background-color: #f0f0f5;
+}
+
+.timer-display {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #34495e;
+  margin-top: 20px;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.timer-btn,
+.timer-select {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #a766c6;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.timer-btn:hover,
+.timer-select:hover {
+  background-color: #9258b0;
+}
+
+.ambient-sounds {
+  margin-top: 30px;
+}
+
+.sound-btn {
+  background-color: #a766c6;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sound-btn:hover {
+  background-color: #9258b0;
+}
+
+.completed-sessions {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.completed-sessions h3 {
+  margin-bottom: 5px;
+  color: #34495e;
+}
+/* --- Contact Page Specific Styles ---- ---------------------------------------------------------------------------------------*/
+.main-content {
+    min-height: 100vh;
+}
+
+.contact-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url("./images/connect.jpg");
+    background-size: cover;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section {
+    padding: 50px 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contact-form-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.contact-info-card {
+    background: linear-gradient(135deg, #b2a7c4, #a766c6);
+    color: #fff;
+    width: 550px;
+}
+
+.contact-info-card h2, .contact-form-card h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-info-card h2 {
+    color: #fff;
+}
+
+.contact-info-card p {
+    color: #f0f0f5;
+    line-height: 1.6;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.map-container {
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-card {
+    background-color: #f0f0f5;
+}
+
+.contact-form-card h2 {
+    color: #34495e;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #a766c6;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #a766c6;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #9258b0;
+    transform: translateY(-2px);
+}
+
+#confirmation-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-container h2 {
+    text-align: center;
+    color: #34495e;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.accordion-btn {
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #34495e;
+    cursor: pointer;
+    padding: 20px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+.accordion-btn:hover {
+    background-color: #f0f0f5;
+}
+
+.accordion-btn::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: #a766c6;
+    float: right;
+    margin-left: 5px;
+}
+
+.active .accordion-btn::after {
+    content: '-';
+}
+
+.accordion-panel {
+    padding: 0 18px;
+    background-color: #fefefe;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.accordion-panel p {
+    margin: 20px 0;
+    color: #666;
+    line-height: 1.6;
+}
+/* Footer styling */
+.footer {
+    background-color: #1a1a1a; /* Dark background */
+    color: white; /* White text */
+    padding: 3rem 0 1rem; /* Padding */
+}
+
+.footer-content {
+    display: grid; /* Grid layout */
+    grid-template-columns: 2fr 1fr 1fr 1fr; /* Different column sizes */
+    gap: 3rem; /* Space between sections */
+    margin-bottom: 2rem; /* Space below */
+}
+
+.footer-logo {
+    display: flex; /* Flexbox layout */
+    align-items: flex-start; /* Align to top */
+    gap: 1rem; /* Space between logo and text */
+    margin-bottom: 2rem; /* Space below */
+}
+
+.footer-logo img {
+    width: 50px; /* Logo width */
+    height: 50px; /* Logo height */
+    border-radius: 50%; /* Circular logo */
+}
+
+.footer-logo h3 {
+    color: #8B4B9C; /* Purple color */
+    font-size: 1.5rem; /* Large font */
+    margin-bottom: 0.5rem; /* Space below */
+}
+
+.footer-logo p {
+    color: #ccc; /* Light gray */
+    font-size: 0.9rem; /* Small font */
+    line-height: 1.6; /* Good line height */
+}
+
+/* Social media links */
+.social-links {
+    display: flex; /* Flexbox layout */
+    gap: 1rem; /* Space between links */
+}
+
+.social-link {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 50%; /* Circular shape */
+    font-weight: bold; /* Bold text */
+    transition:  0.3s ; /* Smooth transition */
+}
+
+.social-link.facebook {
+    background-color: #3b5998; /* Facebook blue */
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); /* Instagram gradient */
+}
+
+.social-link.twitter {
+    background-color: #1da1f2; /* Twitter blue */
+}
+
+.social-link.linkedin {
+    background-color: #0077b5; /* LinkedIn blue */
+}
+
+/* Footer section headings */
+.footer-section h4 {
+    color: #8B4B9C; /* Purple color */
+    font-size: 1.2rem; /* Medium font */
+    margin-bottom: 1rem; /* Space below */
+    font-weight: 600; /* Semi-bold */
+}
+
+/* Footer links */
+.footer-links {
+    list-style: none; /* No bullet points */
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem; /* Space below each item */
+}
+
+.footer-links a {
+    color: #ccc; /* Light gray color */
+    text-decoration: none; /* No underline */
+    font-size: 0.9rem; /* Small font */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Footer bottom */
+.footer-bottom {
+    border-top: 1px solid #333; /* Top border */
+    padding-top: 2rem; /* Top padding */
+    text-align: center; /* Center text */
+    color: #999; /* Gray color */
+    font-size: 0.9rem; /* Small font */
+}
+
+/* Responsive design - Mobile styles */
+@media (max-width: 768px) {
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex; /* Show hamburger */
+    }
+    
+    /* Hide navigation on mobile by default */
+    .nav {
+        display: none; /* Hidden by default */
+        position: absolute; /* Absolute positioning */
+        top: 100%; /* Below header */
+        left: 0; /* Full width */
+        width: 100%; /* Full width */
+        background: white; /* White background */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Shadow */
+        border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+    }
+    
+    /* Show navigation when active */
+    .nav.active {
+        display: block; /* Show when active */
+    }
+    
+    /* Mobile navigation list */
+    .nav-list {
+        flex-direction: column; /* Vertical layout */
+        gap: 0; /* No gap */
+        padding: 1rem; /* Padding */
+    }
+    
+    /* Mobile navigation links */
+    .nav-link {
+        padding: 1rem; /* Increased padding */
+        border-radius: 5px; /* Small rounded corners */
+        border-bottom: 1px solid #eee; /* Bottom border */
+    }
+   
+    /* Mobile hero section */
+    .hero {
+        flex-direction: column; /* Stack vertically */
+        text-align: center; /* Center text */
+        padding: 2rem 1rem; /* Reduced padding */
+    }
+    
+    .hero-content {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 2rem; /* Add bottom margin */
+    }
+    
+    .hero-title {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    
+    
+    .hero-actions {
+        justify-content: center; /* Center actions */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+    
+    /* Mobile hero image */
+    .hero-circle {
+        width: 280px; /* Smaller width */
+        height: 280px; /* Smaller height */
+    }
+    
+    /* Mobile services grid */
+    .services-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+    
+    /* Mobile service cards */
+    .service-card {
+        flex-direction: column; /* Stack vertically */
+        text-align: center; /* Center text */
+    }
+    
+    /* Mobile newsletter section */
+    .newsletter-content {
+        flex-direction: column; /* Stack vertically */
+        gap: 2rem; /* Space between elements */
+        text-align: center; /* Center text */
+    }
+
+    
+    .newsletter-form button {
+        border-radius: 0 0 10px 10px; /* Bottom rounded corners */
+    }
+    .recipe-hero {
+    background-color: #f0e8ec;
+     background-image: url("./images/Nutrition2.jpg");
+    background-size: cover;  
+    padding: 2rem 1rem;
+    text-align: center;
+    }
+
+    .recipe-hero h1 {
+     font-size: 2.5rem;
+    font-weight: 900;
+    color: #241f1f;
+    margin-bottom: 0.5rem;
+    }
+
+    .recipe-hero p {
+    font-size: 1.1rem;
+    color: #f2ecec;
+    margin-bottom: 2rem;
+    }
+    /* Mobile footer */
+    .footer-content {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 2rem; /* Smaller gap */
+        text-align: center; /* Center text */
+    }
+    
+    .footer-logo {
+        justify-content: center; /* Center logo */
+    }
+    
+    .social-links {
+        justify-content: center; /* Center social links */
+    }
+}
+
